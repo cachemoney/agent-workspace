@@ -91,15 +91,17 @@ For scripts with inline dependencies (PEP 723), run them directly with `uv run s
 
 ### JavaScript and Browser Testing
 
-While this workspace exclusively uses `uv` for Python packages and workspace tools, polyglot agent skills with browser user interfaces (`wayfinder-ui`, `grill-with-docs-ui`) use Playwright for E2E testing:
+While this meta-workspace exclusively uses `uv` for Python packages and workspace tools, custom agent skills live in the dedicated skills catalog repository (`repositories/agent-skills`) and use Playwright for E2E testing:
 
 ```bash
+cd repositories/agent-skills
 npm run test:unit       # Fast Node test runner for server daemons (node --test)
 npm run test:e2e        # Playwright browser test suite across all skills
 npm test                # Run both unit and E2E suites
 ```
 
-Skills remain zero-dependency runtimes when symlinked to consumer repos; test dependencies and `playwright.config.mjs` live centrally at the workspace root. See `docs/adr/0003-centralized-playwright-e2e-testing-for-polyglot-skills.md`.
+Skills remain zero-dependency runtimes when symlinked to consumer repos; test dependencies and `playwright.config.mjs` live self-contained within `repositories/agent-skills`. See `docs/adr/0004-separate-skills-catalog-repository-from-meta-workspace.md`.
+
 
 ## Agent Resources
 

@@ -202,5 +202,5 @@ Single-context documentation layout (`CONTEXT.md` and `docs/adr/` at repo root).
 
 ### Polyglot skills testing
 
-Browser-based skills (`wayfinder-ui`, `grill-with-docs-ui`) use Playwright for E2E testing. While workspace tools and Python packages use `uv`, Node dependencies for browser testing are managed via `npm test` at the workspace root. See `docs/adr/0003-centralized-playwright-e2e-testing-for-polyglot-skills.md`.
+Custom agent skills live in the dedicated skills catalog repository under `repositories/agent-skills/` and use Playwright for E2E testing. While the meta-workspace exclusively uses `uv` for Python, Node dependencies and browser tests are managed within the submodule via `npm test` inside `repositories/agent-skills`. See `docs/adr/0004-separate-skills-catalog-repository-from-meta-workspace.md`.
 </project-context>

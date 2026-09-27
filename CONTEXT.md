@@ -40,6 +40,18 @@ _Avoid_: Two-way binding, shared state
 A self-contained capability directory under `skills/<name>` following the Agent Skills specification (`SKILL.md` frontmatter + instructions, optional `scripts/`, `references/`, `assets/`).
 _Avoid_: Plugin, tool, extension, prompt
 
+**Skills Catalog**:
+A dedicated repository containing multiple custom agent skills, their tests, and their shared runtime dependencies.
+_Avoid_: Skills monorepo, skill pack, skills bucket
+
+**Meta-Workspace**:
+An aggregator repository coordinating tools, submodules, linters, and IDE distribution hooks across projects.
+_Avoid_: Root repo, parent repo, umbrella repo
+
+**Skill Proxy Link**:
+A symlink in the meta-workspace `skills/` directory that points to an individual skill inside a submodule repository.
+_Avoid_: Skill alias, skill forwarder, redirect
+
 **Skill Distribution**:
 Symlinking skills from `skills/` to agent-specific directories (`.opencode/skill`, `.claude/skills`, `.cursor/skills`, `.gemini/skills`) via workspace automation.
 _Avoid_: Copying, syncing, installing
@@ -47,3 +59,4 @@ _Avoid_: Copying, syncing, installing
 **Polyglot Skill**:
 A skill with runtime dependencies declared via `compatibility` frontmatter (e.g., zero-dependency Node.js or `uv run` Python/PEP 723) executed directly without global installation.
 _Avoid_: Monoglot, wrapper script
+

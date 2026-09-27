@@ -1,3 +1,7 @@
+---
+status: superseded by ADR-0004
+---
+
 # 0003: Centralized Playwright E2E Testing for Polyglot Agent Skills
 
 ## Context & Decision
