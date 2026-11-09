@@ -198,7 +198,7 @@ Triage uses the default five canonical labels (`needs-triage`, `needs-info`, `re
 
 ### Domain docs
 
-Single-context documentation layout (`CONTEXT.md` and `docs/adr/` at repo root). See `docs/agents/domain.md`.
+Multi-context documentation layout (`CONTEXT-MAP.md` and `docs/adr/` at repo root, pointing to per-context `CONTEXT.md` and `docs/adr/` across the root workspace and `repositories/*/` submodules). See `docs/agents/domain.md`.
 
 ### Polyglot skills testing
 

@@ -1,3 +1,6 @@
 [submodule "repositories/agent-skills"]
 	path = repositories/agent-skills
 	url = git@github.com:cachemoney/agent-skills.git
+[submodule "repositories/t3code-bar"]
+	path = repositories/t3code-bar
+	url = https://github.com/cachemoney/t3code-bar
