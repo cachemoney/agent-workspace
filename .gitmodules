@@ -4,3 +4,6 @@
 [submodule "repositories/t3code-bar"]
 	path = repositories/t3code-bar
 	url = https://github.com/cachemoney/t3code-bar
+[submodule "repositories/sandcastle"]
+	path = repositories/sandcastle
+	url = git@github.com:cachemoney/sandcastle.git
